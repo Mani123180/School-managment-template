@@ -919,11 +919,12 @@ footer {
   .site-header {
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
   }
 
   .mobile-menu-btn {
     display: flex;
-    margin-left: auto;
   }
 
   .main-nav {
