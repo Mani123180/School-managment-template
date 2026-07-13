@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenSchool Website & Management Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="ZenSchool home" style="display: flex; align-items: center;">
+      <img src="logo.png" alt="ZenSchool Logo" style="height: 50px; object-fit: contain;" />
+    </a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#academics">Academics</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-action" href="#pricing">Choose Plan</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">School website + subscription platform</p>
+        <h1>Launch a complete <span class="highlight-anim">school website</span> and <span class="highlight-anim">management portal</span> in one flow.</h1>
+        <p class="hero-copy">
+          Schools can browse your product site, choose a plan, register, pay, customize their public website, and start using admin, principal, teacher, student, and parent portals.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#pricing">View Pricing Plans</a>
+          <a class="secondary-btn" href="#flow">See Flow</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper" style="flex: 1; display: flex; justify-content: center; align-items: center;">
+        <img src="hero-mockup.png" alt="ZenSchool Dashboard Preview" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.05);" />
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About Us</p>
+        <h2>Empowering Schools with Smart Digital Management</h2>
+        <p style="margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.8; line-height: 1.6;">
+          ZenSchool is a modern School Management Platform developed by Zen4Tech Solutions to simplify day-to-day school operations. Our goal is to help educational institutions reduce paperwork, improve communication, and manage academic activities efficiently through a secure cloud-based platform.
+        </p>
+        <p style="margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.8; line-height: 1.6;">
+          Whether it's managing attendance, homework, announcements, or communication between teachers and parents, ZenSchool provides an easy-to-use solution designed for schools of all sizes.
+        </p>
+        <div style="margin-top: 2.5rem; padding: 1.5rem; background: rgba(0,0,0,0.03); border-radius: 8px; border-left: 4px solid var(--primary, #007bff); text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+          <strong>Our Mission</strong> - To make school management simple, digital, and accessible for every educational institution.
+        </div>
+      </div>
+
+      <div class="section-heading" style="margin-top: 5rem;">
+        <h2>Why Choose ZenSchool?</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <span class="icon">✨</span>
+          <h3>Modern & Easy-to-Use</h3>
+        </article>
+        <article>
+          <span class="icon">🔒</span>
+          <h3>Secure Cloud Platform</h3>
+        </article>
+        <article>
+          <span class="icon">👥</span>
+          <h3>Dedicated Portals</h3>
+        </article>
+        <article>
+          <span class="icon">💬</span>
+          <h3>Real-Time Comm</h3>
+        </article>
+        <article>
+          <span class="icon">📈</span>
+          <h3>Scalable for Growth</h3>
+        </article>
+        <article>
+          <span class="icon">🛠️</span>
+          <h3>Reliable Support</h3>
+        </article>
+      </div>
+
+      <div class="section-heading" style="margin-top: 5rem; margin-bottom: 2rem;">
+        <p class="eyebrow">Built by Zen4Tech Solutions</p>
+        <p style="margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.8; line-height: 1.6;">
+          ZenSchool is proudly developed by Zen4Tech Solutions, a software company focused on building innovative web applications, SaaS products, and AI-powered solutions for businesses and educational institutions.
+        </p>
+      </div>
+      
+      <div class="contact-band" style="margin-top: 3rem;">
+        <div>
+          <h2>Ready to modernize your school?</h2>
+          <p>Schedule a free product demonstration and discover how ZenSchool can simplify school management.</p>
+        </div>
+        <a class="primary-btn" href="#contact">Schedule Demo</a>
+      </div>
+    </section>
+
+    <section class="section academics" id="academics">
+      <div class="section-heading">
+        <p class="eyebrow">Academics modules</p>
+        <h2>Designed for real school workflows.</h2>
+      </div>
+      <div class="module-list">
+        <span>Admissions</span>
+        <span>Attendance</span>
+        <span>Timetable</span>
+        <span>Homework</span>
+        <span>Exams</span>
+        <span>Fees</span>
+        <span>Transport</span>
+        <span>Announcements</span>
+      </div>
+    </section>
+
+    <section class="section flow-section" id="flow">
+      <div class="section-heading">
+        <p class="eyebrow">Customer journey</p>
+        <h2>From school visit to live management system.</h2>
+      </div>
+      <div class="flow-grid">
+        <article class="flow-card green"><span>1</span><h3>User Visits Website</h3><p>School opens your ZenSchool website.</p></article>
+        <article class="flow-card blue"><span>2</span><h3>Explore Website</h3><p>Home, About, Academics, Facilities, Gallery, Contact.</p></article>
+        <article class="flow-card amber"><span>3</span><h3>View Pricing Plans</h3><p>Compare Basic, Standard, and Premium packages.</p></article>
+        <article class="flow-card purple"><span>4</span><h3>Choose a Plan</h3><p>Select the right subscription for the school.</p></article>
+        <article class="flow-card rose"><span>5</span><h3>School Registration</h3><p>Submit school name, email, phone, address, and details.</p></article>
+        <article class="flow-card cyan"><span>6</span><h3>Subscription Payment</h3><p>Complete payment to activate the chosen plan.</p></article>
+        <article class="flow-card orange"><span>7</span><h3>Customize Website</h3><p>Change logo, school name, content, contact, and gallery.</p></article>
+        <article class="flow-card green"><span>8</span><h3>Website Goes Live</h3><p>Public website becomes available for the school.</p></article>
+        <article class="flow-card blue"><span>9</span><h3>Admin Login</h3><p>School admin signs in to the dashboard.</p></article>
+        <article class="flow-card amber"><span>10</span><h3>Role-based Access</h3><p>Admin, principal, teacher, student, and parent access.</p></article>
+        <article class="flow-card green"><span>11</span><h3>Management System</h3><p>Manage all school activities digitally.</p></article>
+      </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+      <div class="section-heading">
+        <p class="eyebrow">Pricing</p>
+        <h2>Choose a plan for your school website.</h2>
+      </div>
+      <div class="pricing-grid" role="list">
+        <article class="price-card" role="listitem">
+          <h3>Basic</h3>
+          <p class="price">₹1,999<span>/month</span></p>
+          <p style="font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem; opacity: 0.8; font-weight: 500;">Up to 300 students</p>
+          <ul>
+            <li>Attendance</li>
+            <li>Homework</li>
+            <li>Announcements</li>
+            <li>Student, Teacher, Parent & Admin portals</li>
+          </ul>
+          <button type="button" data-plan="Basic" data-price="₹1,999/month">Choose Basic</button>
+        </article>
+        <article class="price-card featured" role="listitem">
+          <p class="badge">Popular</p>
+          <h3>Standard</h3>
+          <p class="price">₹4,999<span>/month</span></p>
+          <p style="font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem; opacity: 0.8; font-weight: 500;">Up to 1000 students</p>
+          <ul>
+            <li>Everything in Basic</li>
+            <li>Principal Portal</li>
+            <li>Fees</li>
+            <li>Results</li>
+            <li>Messaging</li>
+            <li>Timetable</li>
+            <li>Reports</li>
+          </ul>
+          <button type="button" data-plan="Standard" data-price="₹4,999/month">Choose Standard</button>
+        </article>
+        <article class="price-card" role="listitem">
+          <h3>Premium Plan</h3>
+          <p class="price" style="font-size: 1.75rem;">Contact Us</p>
+          <p style="font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem; opacity: 0.8; font-weight: 500;">Unlimited Students</p>
+          <ul>
+            <li>Everything in Standard</li>
+            <li>Multi-Branch School Support</li>
+            <li>Online Fee Payment</li>
+            <li>AI Analytics Dashboard</li>
+            <li>SMS & Email Notifications</li>
+            <li>Custom School Branding</li>
+            <li>Cloud Backup & Restore</li>
+            <li>Advanced Reports</li>
+            <li>API Integration</li>
+            <li>Mobile App Support</li>
+            <li>24/7 Premium Support</li>
+          </ul>
+          <button type="button" data-plan="Premium" data-price="Contact Us" onclick="window.location.href='#contact'">Contact Us</button>
+        </article>
+      </div>
+    </section>
+
+
+
+    <section class="section portals" id="portals">
+      <div class="section-heading">
+        <p class="eyebrow">After website live</p>
+        <h2>Admin login opens role-based portals.</h2>
+      </div>
+      <div class="dashboard-preview">
+        <aside class="login-panel">
+          <p class="eyebrow">Admin login</p>
+          <h3>School Admin</h3>
+          <label>
+            Email
+            <input type="email" value="admin@greenvalley.edu" readonly>
+          </label>
+          <label>
+            Password
+            <input type="password" value="schooladmin" readonly>
+          </label>
+          <button class="primary-btn" type="button" id="loginPreviewBtn">Login to Dashboard</button>
+        </aside>
+        <div class="management-preview">
+          <div class="management-topbar">
+            <div>
+              <small>Green Valley School</small>
+              <strong>Management Dashboard</strong>
+            </div>
+            <span id="activeRoleLabel">Admin View</span>
+          </div>
+          <div class="metric-grid">
+            <article><span>Students</span><strong>1,248</strong></article>
+            <article><span>Teachers</span><strong>86</strong></article>
+            <article><span>Today Attendance</span><strong>94%</strong></article>
+            <article><span>Fee Collection</span><strong>82%</strong></article>
+          </div>
+          <div class="dashboard-columns">
+            <article>
+              <h3>Today</h3>
+              <p>Approve leave requests, publish notices, review attendance, and check fee reminders.</p>
+            </article>
+            <article>
+              <h3>Quick Modules</h3>
+              <div class="module-pills">
+                <span>Admissions</span>
+                <span>Fees</span>
+                <span>Exams</span>
+                <span>Reports</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="portal-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; text-align: left;">
+        <article style="padding: 1.5rem; background: rgba(0,0,0,0.03); border-radius: 8px; display: flex; flex-direction: column;">
+          <button type="button" data-role="Admin View" style="margin-bottom: 1rem; width: 100%;">Admin</button>
+          <ul style="font-size: 0.9rem; line-height: 1.6; padding-left: 1.2rem; margin: 0; opacity: 0.8;">
+            <li>Manage Teachers</li>
+            <li>Manage Students</li>
+            <li>Manage Parents</li>
+            <li>Manage Classes</li>
+            <li>Manage Subjects</li>
+            <li>Publish Announcements</li>
+            <li>View Reports</li>
+          </ul>
+        </article>
+        <article style="padding: 1.5rem; background: rgba(0,0,0,0.03); border-radius: 8px; display: flex; flex-direction: column;">
+          <button type="button" data-role="Principal View" style="margin-bottom: 1rem; width: 100%;">Principal</button>
+          <ul style="font-size: 0.9rem; line-height: 1.6; padding-left: 1.2rem; margin: 0; opacity: 0.8;">
+            <li>Attendance reports</li>
+            <li>Academic performance analysis</li>
+            <li>School-wide announcements</li>
+            <li>Communication with teachers</li>
+            <li>School reports</li>
+            <li>Dashboard analytics</li>
+          </ul>
+        </article>
+        <article style="padding: 1.5rem; background: rgba(0,0,0,0.03); border-radius: 8px; display: flex; flex-direction: column;">
+          <button type="button" data-role="Teacher View" style="margin-bottom: 1rem; width: 100%;">Teacher</button>
+          <ul style="font-size: 0.9rem; line-height: 1.6; padding-left: 1.2rem; margin: 0; opacity: 0.8;">
+            <li>My Classes</li>
+            <li>Student List</li>
+            <li>Attendance Management</li>
+            <li>Assignments</li>
+            <li>Study Materials</li>
+            <li>Announcements</li>
+            <li>Secure Messaging</li>
+            <li>Timetable</li>
+            <li>Profile Management</li>
+          </ul>
+        </article>
+        <article style="padding: 1.5rem; background: rgba(0,0,0,0.03); border-radius: 8px; display: flex; flex-direction: column;">
+          <button type="button" data-role="Student View" style="margin-bottom: 1rem; width: 100%;">Student</button>
+          <ul style="font-size: 0.9rem; line-height: 1.6; padding-left: 1.2rem; margin: 0; opacity: 0.8;">
+            <li>View dashboard</li>
+            <li>Check attendance</li>
+            <li>View timetable</li>
+            <li>Download study materials</li>
+            <li>Submit assignments</li>
+            <li>View homework</li>
+            <li>Receive announcements</li>
+            <li>Chat with teachers</li>
+            <li>Track upcoming exams</li>
+          </ul>
+        </article>
+        <article style="padding: 1.5rem; background: rgba(0,0,0,0.03); border-radius: 8px; display: flex; flex-direction: column;">
+          <button type="button" data-role="Parent View" style="margin-bottom: 1rem; width: 100%;">Parent</button>
+          <ul style="font-size: 0.9rem; line-height: 1.6; padding-left: 1.2rem; margin: 0; opacity: 0.8;">
+            <li>Child information</li>
+            <li>Attendance tracking</li>
+            <li>Homework</li>
+            <li>Exam results</li>
+            <li>Fee reminders</li>
+            <li>School announcements</li>
+            <li>Messaging with teachers</li>
+            <li>Profile management</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-band">
+        <div>
+          <p class="eyebrow">Contact us</p>
+          <h2>Ready to onboard a new school?</h2>
+          <p>Use this template as your sales website and subscription onboarding flow.</p>
+        </div>
+        <a class="primary-btn" href="#pricing">Start with Pricing</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Designed & Powered by Zen4Tech Solutions</span>
+    <span>Website / Subscription / Portals</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
