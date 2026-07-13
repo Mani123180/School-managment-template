@@ -11,12 +11,14 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="ZenSchool home" style="display: flex; align-items: center;">
-      <img src="logo.png" alt="ZenSchool Logo" style="height: 50px; object-fit: contain;" />
-    </a>
-    <button class="mobile-menu-btn" aria-label="Toggle menu" style="background: rgba(0,0,0,0.05); border-radius: 8px; padding: 8px; align-items: center; justify-content: center; cursor: pointer; border: none;">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#052666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-    </button>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <a class="brand" href="#home" aria-label="ZenSchool home" style="display: flex; align-items: center; min-width: 0;">
+        <img src="logo.png" alt="ZenSchool Logo" style="height: 50px; max-width: 100%; object-fit: contain;" />
+      </a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu" style="background: rgba(0,0,0,0.05); border-radius: 8px; padding: 8px; align-items: center; justify-content: center; cursor: pointer; border: none; flex-shrink: 0;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#052666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#about">About</a>
