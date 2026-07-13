@@ -20,15 +20,17 @@ planButtons.forEach((button) => {
     const plan = button.dataset.plan;
     const price = button.dataset.price;
 
-    selectedPlanInput.value = `${plan} - ${price}`;
-    paymentPlan.textContent = `${plan} Plan`;
-    paymentAmount.textContent = price;
+    if (selectedPlanInput) selectedPlanInput.value = `${plan} - ${price}`;
+    if (paymentPlan) paymentPlan.textContent = `${plan} Plan`;
+    if (paymentAmount) paymentAmount.textContent = price;
 
-    document.querySelector("#registration").scrollIntoView({ behavior: "smooth" });
+    const regSection = document.querySelector("#registration");
+    if (regSection) regSection.scrollIntoView({ behavior: "smooth" });
   });
 });
 
 function syncPreview() {
+  if (!schoolNameInput || !logoInput || !messageInput || !previewLogo) return;
   const schoolName = schoolNameInput.value.trim() || "Your School";
   const logoText = logoInput.value.trim() || "YS";
   const message = messageInput.value.trim() || "Create a modern public website for your school.";
@@ -40,28 +42,36 @@ function syncPreview() {
 }
 
 [schoolNameInput, logoInput, messageInput].forEach((field) => {
-  field.addEventListener("input", syncPreview);
+  if (field) field.addEventListener("input", syncPreview);
 });
 
-schoolForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  document.querySelector("#customize").scrollIntoView({ behavior: "smooth" });
-});
-
+if (schoolForm) {
+  schoolForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const customizeSection = document.querySelector("#customize");
+    if (customizeSection) customizeSection.scrollIntoView({ behavior: "smooth" });
+  });
+}
 
 roleButtons.forEach((button) => {
   button.addEventListener("click", () => {
     roleButtons.forEach((item) => item.closest("article").classList.remove("is-active"));
     button.closest("article").classList.add("is-active");
-    activeRoleLabel.textContent = button.dataset.role;
+    if (activeRoleLabel) activeRoleLabel.textContent = button.dataset.role;
   });
 });
 
-loginPreviewBtn.addEventListener("click", () => {
-  document.querySelector("#portals").scrollIntoView({ behavior: "smooth" });
+if (loginPreviewBtn) {
+  loginPreviewBtn.addEventListener("click", () => {
+    const portalsSection = document.querySelector("#portals");
+    if (portalsSection) portalsSection.scrollIntoView({ behavior: "smooth" });
+    if (roleButtons.length > 0) roleButtons[0].click();
+  });
+}
+
+if (roleButtons.length > 0) {
   roleButtons[0].click();
-});
-roleButtons[0].click();
+}
 
 syncPreview();
 
@@ -69,16 +79,18 @@ const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
 const mainNav = document.querySelector(".main-nav");
 const headerAction = document.querySelector(".header-action");
 
-mobileMenuBtn.addEventListener("click", () => {
-  mainNav.classList.toggle("is-open");
-  headerAction.classList.toggle("is-open");
-});
+if (mobileMenuBtn && mainNav) {
+  mobileMenuBtn.addEventListener("click", () => {
+    mainNav.classList.toggle("is-open");
+    if (headerAction) headerAction.classList.toggle("is-open");
+  });
+}
 
 // Close menu when a link is clicked
 const navLinks = document.querySelectorAll(".main-nav a");
 navLinks.forEach(link => {
   link.addEventListener("click", () => {
-    mainNav.classList.remove("is-open");
-    headerAction.classList.remove("is-open");
+    if (mainNav) mainNav.classList.remove("is-open");
+    if (headerAction) headerAction.classList.remove("is-open");
   });
 });
