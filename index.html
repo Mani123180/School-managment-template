@@ -13,7 +13,7 @@
   <header class="site-header">
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
       <a class="brand" href="#home" aria-label="ZenSchool home" style="display: flex; align-items: center; min-width: 0;">
-        <img src="logo.png" alt="ZenSchool Logo" style="height: 50px; max-width: 100%; object-fit: contain;" />
+        <img src="Img/logo.png" alt="ZenSchool Logo" style="height: 50px; max-width: 100%; object-fit: contain;" />
       </a>
       <button class="mobile-menu-btn" aria-label="Toggle menu" style="background: rgba(0,0,0,0.05); border-radius: 8px; padding: 8px; align-items: center; justify-content: center; cursor: pointer; border: none; flex-shrink: 0;">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#052666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -25,7 +25,10 @@
       <a href="#academics">Academics</a>
       <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
-      <button class="primary-btn header-login-btn" id="headerLoginBtn" style="margin-left: 1rem; white-space: nowrap;">Portal Login</button>
+      <a class="primary-btn header-whatsapp-btn" id="headerWhatsAppBtn" href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" style="margin-left: 1rem; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; background-color: #25D366;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436.002 9.858-4.419 9.86-9.86.002-2.636-1.02-5.115-2.883-6.979C16.578 1.91 14.1 .89 11.66.89c-5.442 0-9.863 4.42-9.865 9.862-.001 1.838.482 3.633 1.4 5.2l-.995 3.636 3.73-.978zm11.565-7.604c-.3-.15-1.774-.875-2.046-.974-.272-.1-.471-.15-.669.15-.198.3-.77.974-.944 1.173-.173.2-.347.225-.647.075-.3-.15-1.266-.467-2.41-1.485-.89-.795-1.49-1.777-1.664-2.078-.174-.3-.019-.462.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.774-.726 2.022-1.429.247-.704.247-1.306.173-1.429-.074-.124-.272-.198-.57-.347z"/></svg>
+        WhatsApp
+      </a>
     </nav>
   </header>
 
@@ -43,7 +46,7 @@
         </div>
       </div>
       <div class="hero-image-wrapper" style="flex: 1; display: flex; justify-content: center; align-items: center;">
-        <img src="hero-mockup.png" alt="ZenSchool Dashboard Preview" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.05);" />
+        <img src="Img/hero-mockup.png" alt="ZenSchool Dashboard Preview" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.05);" />
       </div>
     </section>
 
@@ -278,115 +281,60 @@
     </section>
 
     <section class="section contact" id="contact">
-      <div class="contact-band">
-        <div>
-          <p class="eyebrow">Contact us</p>
-          <h2>Ready to onboard a new school?</h2>
-          <p>Use this template as your sales website and subscription onboarding flow.</p>
+      <div class="section-heading">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Contact Us</h2>
+        <p style="margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.8;">
+          Have questions about ZenSchool? Send us a message and our team will get back to you shortly.
+        </p>
+      </div>
+
+      <div class="contact-container" style="max-width: 650px; margin: 3rem auto 0; padding: 2.5rem; background: rgba(255, 255, 255, 0.03); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
+        <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+              <label for="contactName" style="font-weight: 600; font-size: 0.9rem;">Your Name *</label>
+              <input type="text" id="contactName" required placeholder="Enter your name" style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0,0,0,0.2); color: white; outline: none; transition: border-color 0.3s;">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+              <label for="contactEmail" style="font-weight: 600; font-size: 0.9rem;">Email Address *</label>
+              <input type="email" id="contactEmail" required placeholder="Enter Email id" style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0,0,0,0.2); color: white; outline: none; transition: border-color 0.3s;">
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+              <label for="contactPhone" style="font-weight: 600; font-size: 0.9rem;">Mobile Number *</label>
+              <input type="tel" id="contactPhone" required placeholder="Enter the number" style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0,0,0,0.2); color: white; outline: none; transition: border-color 0.3s;">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+              <label for="contactSchool" style="font-weight: 600; font-size: 0.9rem;">School Name *</label>
+              <input type="text" id="contactSchool" required placeholder="Zen School" style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0,0,0,0.2); color: white; outline: none; transition: border-color 0.3s;">
+            </div>
+          </div>
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+            <label for="contactMessage" style="font-weight: 600; font-size: 0.9rem;">Your Message *</label>
+            <textarea id="contactMessage" required rows="4" placeholder="How can we help you?" style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0,0,0,0.2); color: white; outline: none; resize: vertical; transition: border-color 0.3s;"></textarea>
+          </div>
+          <button type="submit" class="primary-btn" style="align-self: flex-start; min-width: 150px; font-weight: 700; margin-top: 0.5rem;">Send Message</button>
+        </form>
+        <div id="contactSuccessMessage" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <span style="font-size: 3rem;">🎉</span>
+          <h3 style="margin-top: 1rem; color: #10B981;">Message Sent Successfully!</h3>
+          <p style="margin-top: 0.5rem; opacity: 0.8;">Thank you for contacting us. We will get back to you shortly.</p>
         </div>
-        <a class="primary-btn" href="#pricing">Start with Pricing</a>
       </div>
     </section>
   </main>
 
   <footer>
     <span>Designed & Powered by Zen4Tech Solutions</span>
-    <span>Website / Subscription / Portals</span>
+    <span>Website / Subscription</span>
   </footer>
 
-  <!-- Portal Immersive Container -->
-  <div id="portal-container" class="portal-hidden">
-    <!-- Login Screen -->
-    <div id="portal-login-screen" class="portal-screen">
-      <div class="login-decorations">
-        <div class="decor-circle circle-1"></div>
-        <div class="decor-circle circle-2"></div>
-      </div>
-      <div class="login-card">
-        <div class="login-header">
-          <div class="brand-mark-login">ZS</div>
-          <h2>School Management Portal</h2>
-          <p>Sign in to access your dashboard</p>
-        </div>
-        <form id="portalLoginForm">
-          <div class="form-group">
-            <label for="portalRoleSelect">Select Role</label>
-            <select id="portalRoleSelect" required>
-              <option value="" disabled selected>Choose your role...</option>
-              <option value="admin">Admin</option>
-              <option value="principal">Principal</option>
-              <option value="teacher">Teacher</option>
-              <option value="student">Student</option>
-              <option value="parent">Parent</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="portalUsername">Username / Email</label>
-            <input type="text" id="portalUsername" placeholder="Enter username" required>
-          </div>
-          <div class="form-group">
-            <label for="portalPassword">Password</label>
-            <input type="password" id="portalPassword" placeholder="••••••••" required>
-          </div>
-          <button type="submit" class="primary-btn login-submit-btn">Sign In</button>
-        </form>
-
-
-        
-        <button type="button" class="exit-portal-btn" id="exitPortalBtn">← Back to Website</button>
-      </div>
-    </div>
-
-    <!-- Dashboard Screen -->
-    <div id="portal-dashboard-screen" class="portal-screen dashboard-layout portal-hidden">
-      <!-- Sidebar -->
-      <aside class="dashboard-sidebar">
-        <div class="sidebar-header">
-          <div class="brand-mark-sidebar">ZS</div>
-          <span class="sidebar-school-name" id="dashboardSchoolName">ZenSchool</span>
-        </div>
-        
-        <div class="sidebar-profile">
-          <div class="profile-avatar" id="profileAvatar">A</div>
-          <div class="profile-info">
-            <h4 id="profileName">Admin User</h4>
-            <span id="profileRole">Admin</span>
-          </div>
-        </div>
-
-        <nav class="sidebar-menu" id="sidebarMenu">
-          <!-- Dynamic Role Features will be inserted here -->
-        </nav>
-
-        <div class="sidebar-footer">
-          <button type="button" class="logout-btn" id="portalLogoutBtn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-            Logout
-          </button>
-        </div>
-      </aside>
-
-      <!-- Main Panel -->
-      <main class="dashboard-main">
-        <header class="dashboard-header">
-          <div class="header-left">
-            <button id="sidebarToggle" class="sidebar-toggle-btn" aria-label="Toggle Sidebar">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-            </button>
-            <h2 id="currentFeatureTitle">Dashboard Overview</h2>
-          </div>
-          <div class="header-right">
-            <span class="current-date" id="currentDateDisplay">July 22, 2026</span>
-          </div>
-        </header>
-
-        <!-- Dashboard Dynamic Content Pane -->
-        <div class="dashboard-content" id="dashboardContentPane">
-          <!-- Content loaded dynamically based on active feature -->
-        </div>
-      </main>
-    </div>
-  </div>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919876543210?text=Hi!%20I%27m%20interested%20in%20ZenSchool%20Management%20Platform." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436.002 9.858-4.419 9.86-9.86.002-2.636-1.02-5.115-2.883-6.979C16.578 1.91 14.1 .89 11.66.89c-5.442 0-9.863 4.42-9.865 9.862-.001 1.838.482 3.633 1.4 5.2l-.995 3.636 3.73-.978zm11.565-7.604c-.3-.15-1.774-.875-2.046-.974-.272-.1-.471-.15-.669.15-.198.3-.77.974-.944 1.173-.173.2-.347.225-.647.075-.3-.15-1.266-.467-2.41-1.485-.89-.795-1.49-1.777-1.664-2.078-.174-.3-.019-.462.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.774-.726 2.022-1.429.247-.704.247-1.306.173-1.429-.074-.124-.272-.198-.57-.347z"/></svg>
+  </a>
 
   <script src="script.js"></script>
 </body>

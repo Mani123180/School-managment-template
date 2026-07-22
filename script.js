@@ -2278,3 +2278,27 @@ function renderParentProfile() {
   });
 }
 
+// Contact Form Handler
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.querySelector("#contactForm");
+  const contactSuccess = document.querySelector("#contactSuccessMessage");
+  
+  if (contactForm && contactSuccess) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      const name = document.querySelector("#contactName").value;
+      const email = document.querySelector("#contactEmail").value;
+      const phone = document.querySelector("#contactPhone").value;
+      const school = document.querySelector("#contactSchool").value;
+      const message = document.querySelector("#contactMessage").value;
+      
+      console.log("Contact Form Submitted:", { name, email, phone, school, message });
+      
+      // Hide form and show success message
+      contactForm.style.display = "none";
+      contactSuccess.style.display = "block";
+    });
+  }
+});
+

@@ -50,8 +50,8 @@ textarea {
   justify-content: space-between;
   gap: 24px;
   padding: 16px clamp(18px, 4vw, 64px);
-  border-bottom: 1px solid rgba(23, 33, 36, 0.08);
-  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(5, 8, 25, 0.85);
   backdrop-filter: blur(18px);
 }
 
@@ -66,7 +66,7 @@ textarea {
   display: none;
   background: transparent;
   border: none;
-  color: var(--soft);
+  color: var(--ink);
   cursor: pointer;
   padding: 8px;
 }
@@ -94,7 +94,7 @@ textarea {
 }
 
 .main-nav a:hover {
-  color: var(--mint-dark);
+  color: #fff;
 }
 
 .header-action,
@@ -395,6 +395,9 @@ h3 {
 .price-card {
   position: relative;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .price-card.featured {
@@ -428,13 +431,15 @@ h3 {
 .price-card ul {
   display: grid;
   gap: 12px;
-  min-height: 146px;
   margin: 0 0 24px;
   padding-left: 18px;
+  flex-grow: 1;
+  align-content: start;
 }
 
 .price-card button {
   width: 100%;
+  margin-top: auto;
 }
 
 .checkout-layout,
@@ -1826,5 +1831,50 @@ footer {
   .portal-card {
     padding: 16px;
   }
+}
+
+/* Contact Form & WhatsApp Float Styling */
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: var(--mint) !important;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+
+@media (max-width: 650px) {
+  #contactForm > div {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #20BA5A;
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
 }
 
