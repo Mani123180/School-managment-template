@@ -1701,7 +1701,7 @@ function renderTeacherProfileManagement() {
         </div>
         <div class="portal-input-group">
           <label>Email Address</label>
-          <input type="email" value="rahul.verma@zenschool.com" required>
+          <input type="email" value="rahul.verma@zencampus.com" required>
         </div>
       </div>
       <div class="portal-form-row">
