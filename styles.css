@@ -184,6 +184,34 @@ textarea {
   text-transform: uppercase;
 }
 
+.promo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #0d1b2a, #1b263b);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.promo-badge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  box-shadow: 0 0 8px #3b82f6;
+  display: inline-block;
+}
+
+.promo-badge .emoji {
+  font-size: 14px;
+}
+
 h1,
 h2,
 h3,
@@ -353,6 +381,13 @@ h3 {
 .success-note {
   color: var(--muted);
   line-height: 1.55;
+}
+
+.price-card li,
+.price-card p,
+.price-card h3,
+.price-card span {
+  color: #000000 !important;
 }
 
 .icon {
