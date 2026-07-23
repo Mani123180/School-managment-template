@@ -49,10 +49,17 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 16px clamp(18px, 4vw, 64px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(5, 8, 25, 0.85);
+  padding: 0px clamp(18px, 3vw, 64px);
+  border-bottom: 1px solid #e2e8f0;
+  background: #ffffff;
   backdrop-filter: blur(18px);
+  color: #000000;
+}
+
+.brand-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .brand {
@@ -60,13 +67,20 @@ textarea {
   align-items: center;
   gap: 10px;
   font-weight: 800;
+  color: #000000;
 }
+
+.brand img {
+  height: 82px;
+  width: auto;
+}
+
 
 .mobile-menu-btn {
   display: none;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.05);
   border: none;
-  color: var(--ink);
+  color: #000000;
   cursor: pointer;
   padding: 8px;
 }
@@ -87,14 +101,34 @@ textarea {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: clamp(12px, 2vw, 28px);
-  color: var(--muted);
+  justify-content: space-between;
+  flex-grow: 1;
   font-size: 14px;
   font-weight: 700;
 }
 
+.nav-links-center {
+  display: flex;
+  gap: clamp(16px, 2.5vw, 32px);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links-right {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.5vw, 32px);
+  margin-left: auto;
+}
+
+.main-nav a {
+  color: #000000;
+  transition: color 0.2s ease;
+}
+
 .main-nav a:hover {
-  color: #fff;
+  color: var(--mint);
 }
 
 .header-action,
@@ -927,10 +961,23 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 12px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
   }
+
+  .brand-wrapper {
+    width: 100%;
+  }
+
+  .brand img {
+    height: 62px;
+  }
+
 
   .mobile-menu-btn {
     display: flex;
+    background: rgba(0, 0, 0, 0.05);
+    color: #000000;
   }
 
   .main-nav {
@@ -938,11 +985,35 @@ footer {
     width: 100%;
     flex-direction: column;
     padding: 16px 0 4px;
-    gap: 16px;
+    gap: 20px;
   }
 
   .main-nav.is-open {
     display: flex;
+  }
+
+  .nav-links-center {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+
+  .nav-links-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: stretch;
+    margin-left: 0;
+  }
+
+  .nav-links-right .header-whatsapp-btn {
+    margin-left: 0 !important;
+    width: 100%;
+    justify-content: center;
   }
 
   .header-action {
