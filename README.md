@@ -1,1 +1,1 @@
-# School-managment-template
+# Campus-management-template

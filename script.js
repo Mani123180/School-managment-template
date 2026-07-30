@@ -32,9 +32,9 @@ planButtons.forEach((button) => {
 
 function syncPreview() {
   if (!schoolNameInput || !logoInput || !messageInput || !previewLogo) return;
-  const schoolName = schoolNameInput.value.trim() || "Your School";
+  const schoolName = schoolNameInput.value.trim() || "Your Campus";
   const logoText = logoInput.value.trim() || "YS";
-  const message = messageInput.value.trim() || "Create a modern public website for your school.";
+  const message = messageInput.value.trim() || "Create a modern public website for your campus.";
 
   previewLogo.textContent = logoText.toUpperCase();
   previewName.textContent = schoolName;
@@ -134,7 +134,7 @@ const portalState = {
     { code: "SCI102", name: "Physics & Chemistry", teacher: "Rahul Verma", class: "Grade 10-A" }
   ],
   announcements: [
-    { date: "2026-07-20", title: "Independence Day Celebrations", scope: "School-wide", content: "School will celebrate Independence Day on Aug 15th with cultural performances." },
+    { date: "2026-07-20", title: "Independence Day Celebrations", scope: "Campus-wide", content: "Campus will celebrate Independence Day on Aug 15th with cultural performances." },
     { date: "2026-07-18", title: "Term 1 Exam Schedule", scope: "Grade 10-A", content: "Term 1 exams start from September 5th. Syllabus has been uploaded." }
   ],
   attendance: {
@@ -203,9 +203,9 @@ const roleMenuConfigs = {
   principal: [
     { id: "attendance-reports", name: "Attendance Reports", icon: "📝" },
     { id: "academic-performance", name: "Academic Performance Analysis", icon: "📈" },
-    { id: "school-wide-announcements", name: "School-wide Announcements", icon: "📣" },
+    { id: "school-wide-announcements", name: "Campus-wide Announcements", icon: "📣" },
     { id: "communication-teachers", name: "Communication with Teachers", icon: "💬" },
-    { id: "school-reports", name: "School Reports", icon: "📋" },
+    { id: "school-reports", name: "Campus Reports", icon: "📋" },
     { id: "dashboard-analytics", name: "Dashboard Analytics", icon: "📊" }
   ],
   teacher: [
@@ -236,7 +236,7 @@ const roleMenuConfigs = {
     { id: "parent-homework", name: "Homework", icon: "📝" },
     { id: "exam-results", name: "Exam Results", icon: "🏆" },
     { id: "fee-reminders", name: "Fee Reminders", icon: "💳" },
-    { id: "school-announcements", name: "School Announcements", icon: "📢" },
+    { id: "school-announcements", name: "Campus Announcements", icon: "📢" },
     { id: "messaging-teachers", name: "Messaging with Teachers", icon: "💬" },
     { id: "parent-profile", name: "Profile Management", icon: "⚙️" }
   ]
@@ -951,7 +951,7 @@ function renderPublishAnnouncements() {
       <div class="portal-input-group">
         <label>Scope / Audience</label>
         <select id="annScope">
-          <option value="School-wide">School-wide</option>
+          <option value="Campus-wide">Campus-wide</option>
           <option value="Grade 10-A">Grade 10-A</option>
           <option value="Grade 9-B">Grade 9-B</option>
         </select>
@@ -1030,13 +1030,13 @@ function renderViewReports() {
         <h3>${portalState.parents.length}</h3>
       </div>
       <div class="portal-metric-card">
-        <p>School Notices</p>
+        <p>Campus Notices</p>
         <h3>${portalState.announcements.length}</h3>
       </div>
     </div>
 
     <div class="portal-card">
-      <div class="portal-card-header"><h3>School Performance Overview</h3></div>
+      <div class="portal-card-header"><h3>Campus Performance Overview</h3></div>
       <p style="margin-top:0;">This report shows an analytical summary of fees collection, student attendances, and class progress.</p>
       <div class="portal-table-wrapper">
         <table class="portal-table">
@@ -1270,7 +1270,7 @@ function renderPrincipalDashboardAnalytics() {
     
     <div class="portal-grid-2x2">
       <div class="portal-card">
-        <div class="portal-card-header"><h3>School Performance Chart</h3></div>
+        <div class="portal-card-header"><h3>Campus Performance Chart</h3></div>
         <div style="height: 180px; display: flex; align-items: flex-end; justify-content: space-around; padding-top: 20px;">
           <div style="text-align: center; width: 60px;">
             <div style="background: var(--mint); height: 120px; border-radius: 4px;"></div>
@@ -1292,7 +1292,7 @@ function renderPrincipalDashboardAnalytics() {
         <ul style="font-size:13px; line-height:1.8; opacity:0.8; padding-left:18px;">
           <li>Admin admitted a student: Arjun Kumar.</li>
           <li>Attendance registered for today: 2 Absentees.</li>
-          <li>School announcement: Independence Day celebration published.</li>
+          <li>Campus announcement: Independence Day celebration published.</li>
         </ul>
       </div>
     </div>
@@ -2001,7 +2001,7 @@ function renderStudentAnnouncements() {
   const container = document.createElement("div");
   container.className = "portal-card";
   container.innerHTML = `
-    <div class="portal-card-header"><h3>School Notices Inbox</h3></div>
+    <div class="portal-card-header"><h3>Campus Notices Inbox</h3></div>
     <div class="portal-table-wrapper">
       <table class="portal-table">
         <tbody>
